@@ -1,0 +1,7 @@
+version: 0.0
+os: linux
+hooks:
+  ApplicationStop:
+    - location: scripts/replacer.sh
+      timeout: 300
+      runas: root

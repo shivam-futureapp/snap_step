@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Animation App</title>
+    <style>
+      /* Add your CSS for animation here */
+      @keyframes slidein {
+        from {
+          transform: translateY(-50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .animated-text {
+        animation: slidein 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/submit" method="post">
+      <input type="text" name="user_input" placeholder="Enter your text" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

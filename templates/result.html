@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text Animation Result</title>
+    <style>
+      /* Add your CSS for animation here */
+
+      .fonts {
+        font-size: 100px;
+        color: rgb(189, 9, 39);
+        text-shadow: darkgrey;
+      }
+      @keyframes slidein {
+        from {
+          transform: translateY(-150px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      .animated-text {
+        animation: slidein 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1 class="animated-text fonts">Welcome, {{ user_input }}!</h1>
+    </center>
+  </body>
+</html>

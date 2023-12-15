@@ -1,8 +1,12 @@
 version: 0.2
 phases:
-  pre-build:
+  pre_build:
     commands:
-      - docker login -u shivamspace -p Jaya@3439
-      - docker build -t shivamspace/sample-python:latest
+     - docker login -u shivamspace -p Jaya@3439
+
+  build:
+    commands:
+      - docker build -t shivamspace/sample-python:latest .
+  post_build:
+    commands:
       - docker push shivamspace/sample-python:latest
-      
